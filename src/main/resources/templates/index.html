@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<!-- Insert content into the layouts/layout.html -->
+<th:block layout:fragment="content">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Beautiful Website</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(to right, #6a11cb, #2575fc);
+                color: #fff;
+            }
+            header {
+                text-align: center;
+                padding: 100px 20px;
+            }
+            h1 {
+                font-size: 48px;
+                margin: 0;
+            }
+            p {
+                font-size: 20px;
+            }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 20px;
+            }
+            .card {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                margin: 15px;
+                padding: 20px;
+                max-width: 300px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s;
+            }
+            .card:hover {
+                transform: scale(1.05);
+            }
+            .card h2 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            .card p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            footer {
+                text-align: center;
+                padding: 20px;
+                background: rgba(0, 0, 0, 0.5);
+                position: relative;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+
+    <header>
+        <h1>Welcome to My Beautiful Website</h1>
+        <p>Explore the beauty of simplicity.</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Card Title 1</h2>
+            <p>This is a description of the first card. It’s simple and elegant.</p>
+        </div>
+        <div class="card">
+            <h2>Card Title 2</h2>
+            <p>This is a description of the second card. Enjoy the beauty!</p>
+        </div>
+        <div class="card">
+            <h2>Card Title 3</h2>
+            <p>This is a description of the third card. Keep exploring!</p>
+        </div>
+    </div>
+
+
+
+</th:block>
+</body>
+</html>
